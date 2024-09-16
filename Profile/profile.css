@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.timeline {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: #3498db;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+}
+
+.timeline-item {
+    display: flex;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.timeline-item .timeline-node {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #3498db;
+    border-radius: 50%;
+    top: 0;
+    left: 50%;
+    margin-left: -10px;
+    z-index: 1;
+}
+
+.timeline-content {
+    padding: 10px 20px;
+    background-color: white;
+    border-radius: 6px;
+    width: 45%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    margin-left: 55%;
+    text-align: left;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    margin-right: 55%;
+    text-align: left;
+}
+
+.timeline-content h2 {
+    margin: 0 0 5px 0;
+    color: #3498db;
+}
+
+.timeline-content p {
+    margin: 0;
+}
+
+.timeline-date {
+    display: block;
+    font-size: 0.85em;
+    color: #777;
+    margin-top: 10px;
+    text-align: left;
+}
